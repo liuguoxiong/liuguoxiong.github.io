@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>陌生</title>
+  
+  <subtitle>当你的才华还撑不起你的野心的时候，你就应该静下心来学习；当你的能力还驾驭不了你的目标时，就应该沉下心来，历练；</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://github.com/liuguoxiong/"/>
+  <updated>2019-05-30T08:25:49.129Z</updated>
+  <id>https://github.com/liuguoxiong/</id>
+  
+  <author>
+    <name>Liuguoxiong</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://github.com/liuguoxiong/2019/05/30/hello-world/"/>
+    <id>https://github.com/liuguoxiong/2019/05/30/hello-world/</id>
+    <published>2019-05-30T03:14:02.883Z</published>
+    <updated>2019-05-30T08:25:49.129Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
