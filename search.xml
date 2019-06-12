@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[jenkins]]></title>
     <url>%2F2019%2F06%2F12%2Fjenkins%2F</url>
-    <content type="text"><![CDATA[jenkins+github自动部署项目 jenkins重启命令service jenkins restart jenkins构建项目后会杀死字进程解决办法export BUILD_ID=dontKillMenohup java -jar /home/cloud/run/spring-boot-0.0.1-SNAPSHOT.jar &gt;/dev/null 2&gt;&amp;1 &amp;sleep 10s]]></content>
+    <content type="text"><![CDATA[jenkins+github自动部署项目遇到的问题 jenkins重启命令service jenkins restart jenkins构建项目后会杀死字进程解决办法export BUILD_ID=dontKillMenohup java -jar /home/cloud/run/spring-boot-0.0.1-SNAPSHOT.jar &gt;/dev/null 2&gt;&amp;1 &amp;sleep 10s]]></content>
       <categories>
         <category>jenkins</category>
       </categories>
