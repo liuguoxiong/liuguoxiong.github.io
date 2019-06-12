@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[jenkins]]></title>
+    <url>%2F2019%2F06%2F12%2Fjenkins%2F</url>
+    <content type="text"><![CDATA[jenkins+github自动部署项目 jenkins重启命令service jenkins restart jenkins构建项目后会杀死字进程解决办法export BUILD_ID=dontKillMenohup java -jar /home/cloud/run/spring-boot-0.0.1-SNAPSHOT.jar &gt;/dev/null 2&gt;&amp;1 &amp;sleep 10s]]></content>
+      <categories>
+        <category>jenkins</category>
+      </categories>
+      <tags>
+        <tag>jenkins</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[redis学习]]></title>
     <url>%2F2019%2F05%2F30%2Fhello-world%2F</url>
     <content type="text"><![CDATA[刚开始使用redis，记录一些东西，可能有点杂 Redis为什么使用单进程单线程方式也这么快1完全基于内存2采用单线程,避免了不必要的上下文切换和竞争条件3使用多路 I/O 复用模型 redis的内部实现内部实现采用epoll参考文章http://yaocoder.blog.51cto.com/2668309/888374 多路 I/O 复用和多线程IO有什么区别呢1.CPU本来就是线性的不论什么都需要顺序处理并行只能是多核CPU2.跟多线程相比较,线程切换需要切换到内核进行线程切换,需要消耗时间和资源.而I/O多路复用不需要切换线/进程,效率相对较高,特别是对高并发的应用nginx就是用I/O多路复用,故而性能极佳.但多线程编程逻辑和处理上比I/O多路复用简单.而I/O多路复用处理起 IO 多路复用是5种I/O模型中的第3种，对各种模型讲个故事，描述下区别：故事情节为：老李去买火车票，三天后买到一张退票。参演人员（老李，黄牛，售票员，快递员），往返车站耗费1小时。 1.阻塞I/O模型 老李去火车站买票，排队三天买到一张退票。 耗费：在车站吃喝拉撒睡 3天，其他事一件没干。 2.非阻塞I/O模型 老李去火车站买票，隔12小时去火车站问有没有退票，三天后买到一张票。 耗费：往返车站6次，路上6小时，其他时间做了好多事。 3.I/O复用模型 1.select/poll 老李去火车站买票，委托黄牛，然后每隔6小时电话黄牛询问，黄牛三天内买到票，然后老李去火车站交钱领票。 耗费：往返车站2次，路上2小时，黄牛手续费100元，打电话17次 2.epoll 老李去火车站买票，委托黄牛，黄牛买到后即通知老李去领，然后老李去火车站交钱领票。 耗费：往返车站2次，路上2小时，黄牛手续费100元，无需打电话 4.信号驱动I/O模型 老李去火车站买票，给售票员留下电话，有票后，售票员电话通知老李，然后老李去火车站交钱领票。 耗费：往返车站2次，路上2小时，免黄牛费100元，无需打电话 5.异步I/O模型 老李去火车站买票，给售票员留下电话，有票后，售票员电话通知老李并快递送票上门。 耗费：往返车站1次，路上1小时，免黄牛费100元，无需打电话 redisTemplate apihttps://docs.spring.io/spring-data/redis/docs/current/api/org/springframework/data/redis/core/RedisTemplate.html#restore-K-byte:A-long-java.util.concurrent.TimeUnit- 还在持续记录中]]></content>

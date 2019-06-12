@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/liuguoxiong/"/>
-  <updated>2019-05-30T08:53:33.777Z</updated>
+  <updated>2019-06-12T08:20:28.361Z</updated>
   <id>https://github.com/liuguoxiong/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>jenkins</title>
+    <link href="https://github.com/liuguoxiong/2019/06/12/jenkins/"/>
+    <id>https://github.com/liuguoxiong/2019/06/12/jenkins/</id>
+    <published>2019-06-12T08:04:48.000Z</published>
+    <updated>2019-06-12T08:20:28.361Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;jenkins-github自动部署项目&quot;&gt;&lt;a href=&quot;#jenkins-github自动部署项目&quot; class=&quot;headerlink&quot; title=&quot;jenkins+github自动部署项目&quot;&gt;&lt;/a&gt;jenkins+github自动部署项目&lt;/h3&gt;
+    
+    </summary>
+    
+      <category term="jenkins" scheme="https://github.com/liuguoxiong/categories/jenkins/"/>
+    
+    
+      <category term="jenkins" scheme="https://github.com/liuguoxiong/tags/jenkins/"/>
+    
+  </entry>
   
   <entry>
     <title>redis学习</title>
