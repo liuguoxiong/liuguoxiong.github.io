@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="java线程记录">
-<meta name="keywords" content="Thread">
+  <meta name="description" content="java基础学习（持续更新）java基础学习">
+<meta name="keywords" content="java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java线程记录">
-<meta property="og:url" content="https://github.com/liuguoxiong/2019/06/15/thread/index.html">
+<meta property="og:title" content="java基础学习">
+<meta property="og:url" content="https://github.com/liuguoxiong/2019/06/26/java/index.html">
 <meta property="og:site_name" content="陌生">
-<meta property="og:description" content="java线程记录">
+<meta property="og:description" content="java基础学习（持续更新）java基础学习">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-18T06:41:46.765Z">
+<meta property="og:updated_time" content="2019-06-26T02:26:56.775Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java线程记录">
-<meta name="twitter:description" content="java线程记录">
+<meta name="twitter:title" content="java基础学习">
+<meta name="twitter:description" content="java基础学习（持续更新）java基础学习">
 
 
 
@@ -117,7 +117,7 @@
 
   
   
-  <link rel="canonical" href="https://github.com/liuguoxiong/2019/06/15/thread/">
+  <link rel="canonical" href="https://github.com/liuguoxiong/2019/06/26/java/">
 
 
 
@@ -127,7 +127,7 @@
   };
 </script>
 
-  <title>java线程记录 | 陌生</title>
+  <title>java基础学习 | 陌生</title>
   
 
 
@@ -359,7 +359,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/liuguoxiong/2019/06/15/thread/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/liuguoxiong/2019/06/26/java/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Liuguoxiong">
@@ -376,7 +376,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">java线程记录
+          <h1 class="post-title" itemprop="name headline">java基础学习
 
               
             
@@ -402,24 +402,12 @@
                 
               
 
-              <time title="创建时间：2019-06-15 17:32:55" itemprop="dateCreated datePublished" datetime="2019-06-15T17:32:55+08:00">2019-06-15</time>
+              <time title="创建时间：2019-06-26 10:06:40 / 修改时间：10:26:56" itemprop="dateCreated datePublished" datetime="2019-06-26T10:06:40+08:00">2019-06-26</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-06-18 14:41:46" itemprop="dateModified" datetime="2019-06-18T14:41:46+08:00">2019-06-18</time>
               
             
           </span>
@@ -436,7 +424,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Thread/" itemprop="url" rel="index"><span itemprop="name">Thread</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
 
                 
                 
@@ -475,63 +463,31 @@
       
 
       
-        <h2 id="java线程记录"><a href="#java线程记录" class="headerlink" title="java线程记录"></a>java线程记录</h2><a id="more"></a>
-<h3 id="创建线程和启动"><a href="#创建线程和启动" class="headerlink" title="创建线程和启动"></a>创建线程和启动</h3><h4 id="（1）继承Thread类创建线程类"><a href="#（1）继承Thread类创建线程类" class="headerlink" title="（1）继承Thread类创建线程类"></a>（1）继承Thread类创建线程类</h4><p>通过继承Thread类创建线程类的具体步骤和具体代码如下：</p>
-<p>   • 定义一个继承Thread类的子类，并重写该类的run()方法；</p>
-<p>   • 创建Thread子类的实例，即创建了线程对象；</p>
-<p>   • 调用该线程对象的start()方法启动线程。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class SomeThead extends Thraad   &#123; </span><br><span class="line">    public void run()   &#123; </span><br><span class="line">     //do something here  </span><br><span class="line">    &#125;  </span><br><span class="line"> &#125; </span><br><span class="line"> </span><br><span class="line">public static void main(String[] args)&#123;</span><br><span class="line"> SomeThread oneThread = new SomeThread();   </span><br><span class="line">  步骤3：启动线程：   </span><br><span class="line"> oneThread.start(); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="java基础学习（持续更新）"><a href="#java基础学习（持续更新）" class="headerlink" title="java基础学习（持续更新）"></a>java基础学习（持续更新）</h2><p>java基础学习</p>
+<a id="more"></a>
+<h3 id="为什么重写equals时必须重写hashCode方法？"><a href="#为什么重写equals时必须重写hashCode方法？" class="headerlink" title="为什么重写equals时必须重写hashCode方法？"></a>为什么重写equals时必须重写hashCode方法？</h3><p>Object.hashCode的通用约定：如果两个对象根据equals(Object)方法是相等的，那么调用这两个对象中任一个对象的hashCode方法必须产生同样的整数结果。<br>如果只重写了equals，s1.equals(s2)返回true。原生的hashCode值是根据内存地址换算出来的一个值。s1 s2的hashcode必然不相同，违背了上面的约定。<br>对于HashSet和HashMap这些基于散列值（hash）实现的类，数组的下标是根据传入的元素hashCode方法的返回值再和特定的值异或决定的，如果不重写hashCode的话，可能导致HashSet、HashMap不能正常的运作。</p>
+<h3 id="为什么Java中只有值传递？"><a href="#为什么Java中只有值传递？" class="headerlink" title="为什么Java中只有值传递？"></a>为什么Java中只有值传递？</h3><p>值传递（pass by value）是指在调用函数时将实际参数复制一份传递到函数中，这样在函数中如果对参数进行修改，将不会影响到实际参数。<br>引用传递（pass by reference）是指在调用函数时将实际参数的地址直接传递到函数中，那么在函数中对参数所进行的修改，将影响到实际参数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">   ParamTest pt = new ParamTest();</span><br><span class="line"></span><br><span class="line">   int i = 10;</span><br><span class="line">   pt.pass(i );</span><br><span class="line">   System.out.println(&quot;print in main , i is &quot; + i);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public void pass(int j) &#123;</span><br><span class="line">   j = 20;</span><br><span class="line">   System.out.println(&quot;print in pass , j is &quot; + j);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h4 id="（2）实现Runnable接口创建线程类"><a href="#（2）实现Runnable接口创建线程类" class="headerlink" title="（2）实现Runnable接口创建线程类"></a>（2）实现Runnable接口创建线程类</h4><p>通过实现Runnable接口创建线程类的具体步骤和具体代码如下：</p>
-<p>   • 定义Runnable接口的实现类，并重写该接口的run()方法；</p>
-<p>   • 创建Runnable实现类的实例，并以此实例作为Thread的target对象，即该Thread对象才是真正的线程对象。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class SomeRunnable implements Runnable   &#123; </span><br><span class="line">  public void run()   &#123; </span><br><span class="line">  //do something here  </span><br><span class="line">  &#125;  </span><br><span class="line">&#125; </span><br><span class="line">Runnable oneRunnable = new SomeRunnable();   </span><br><span class="line">Thread oneThread = new Thread(oneRunnable);   </span><br><span class="line">oneThread.start();</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print in pass , j is 20</span><br><span class="line">print in main , i is 10</span><br></pre></td></tr></table></figure>
 
-<h4 id="（3）通过Callable和Future创建线程"><a href="#（3）通过Callable和Future创建线程" class="headerlink" title="（3）通过Callable和Future创建线程"></a>（3）通过Callable和Future创建线程</h4><p>通过Callable和Future创建线程的具体步骤和具体代码如下：</p>
-<p>   • 创建Callable接口的实现类，并实现call()方法，该call()方法将作为线程执行体，并且有返回值。<br>   • 创建Callable实现类的实例，使用FutureTask类来包装Callable对象，该FutureTask对象封装了该Callable对象的call()方法的返回值。<br>   • 使用FutureTask对象作为Thread对象的target创建并启动新线程。<br>   • 调用FutureTask对象的get()方法来获得子线程执行结束后的返回值其中，Callable接口(也只有一个方法)定义如下：<br>public interface Callable   {<br>  V call() throws Exception;<br> }<br>  步骤1：创建实现Callable接口的类SomeCallable(略);<br>  步骤2：创建一个类对象：<br>      Callable oneCallable = new SomeCallable();<br>  步骤3：由Callable创建一个FutureTask对象：<br>   FutureTask oneTask = new FutureTask(oneCallable);<br>  注释： FutureTask是一个包装器，它通过接受Callable来创建，它同时实现了 Future和Runnable接口。<br>  步骤4：由FutureTask创建一个Thread对象：<br>   Thread oneThread = new Thread(oneTask);<br>  步骤5：启动线程：<br>    oneThread.start(); </p>
-<h3 id="二、线程的生命周期"><a href="#二、线程的生命周期" class="headerlink" title="二、线程的生命周期"></a>二、线程的生命周期</h3><p>新建：用new关键字和Thread类或其子类建立一个线程对象后，该线程对象就处于新生状态。处于新生状态的线程有自己的内存空间，通过调用start方法进入就绪状态（runnable）。</p>
-<p>就绪：处于就绪状态的线程已经具备了运行条件，但还没有分配到CPU，处于线程就绪队列，等待系统为其分配CPU。等待状态并不是执行状态，当系统选定一个等待执行的Thread对象后，<br>它就会从等待执行状态进入执行状态，系统挑选的动作称之为“cpu调度”。一旦获得CPU，线程就进入运行状态并自动调用自己的run方法。</p>
-<p>运行：执行run()方法中的任务。如果该线程失去了cpu资源，就会又从运行状态变为就绪状态。重新等待系统分配资源。也可以对在运行状态的线程调用yield()方法，它就会让出cpu资源，再次变为就绪状态。</p>
-<p>阻塞：执行了sleep（睡眠）方法，或等待I/O设备等资源，将让出CPU并暂时停止自己的运行，进入阻塞状态。<br>在阻塞状态的线程不能进入就绪队列。只有当引起阻塞的原因消除时，如睡眠时间已到，或等待的I/O设备空闲下来，线程便转入就绪状态，重新到就绪队列中排队等待，被系统选中后从原来停止的位置开始继续运行。</p>
-<p>死亡：当线程的run()方法执行完，或者被强制性地终止，就认为它死去。这个线程对象也许是活的，但是，它已经不是一个单独执行的线程</p>
-<h3 id="三、线程管理"><a href="#三、线程管理" class="headerlink" title="三、线程管理"></a>三、线程管理</h3><p>1、线程睡眠——sleep<br>      如果我们需要让当前正在执行的线程暂停一段时间，并进入阻塞状态，则可以通过调用Thread的sleep方法。睡眠的始终是当前正在运行的线程，而不是调用它的线程对象（wait()会释放对象的同步锁，而sleep()则不会释放锁）</p>
-<p>2、线程让步——yield<br> yield()方法和sleep()方法有点相似，它也是Thread类提供的一个静态的方法，它也可以让当前正在执行的线程暂停，让出cpu资源给其他的线程。但是和sleep()方法不同的是，它不会进入到阻塞状态，<br> 而是进入到就绪状态。yield()方法只是让当前线程暂停一下，重新进入就绪的线程池中，让系统的线程调度器重新调度器重新调度一次，<br> 完全可能出现这样的情况：当某个线程调用yield()方法之后，线程调度器又将其调度出来重新进入到运行状态执行。<br> 注：关于sleep()方法和yield()方的区别如下：</p>
-<p>①、sleep方法暂停当前线程后，会进入阻塞状态，只有当睡眠时间到了，才会转入就绪状态。而yield方法调用后 ，是直接进入就绪状态，所以有可能刚进入就绪状态，又被调度到运行状态。</p>
-<p>②、sleep方法声明抛出了InterruptedException，所以调用sleep方法的时候要捕获该异常，或者显示声明抛出该异常。而yield方法则没有声明抛出任务异常。</p>
-<p>③、sleep方法比yield方法有更好的可移植性，通常不要依靠yield方法来控制并发线程的执行。</p>
-<p>3、线程合并——join<br>void join()<br>     当前线程等该加入该线程后面，等待该线程终止。<br>void join(long millis)<br>     当前线程等待该线程终止的时间最长为 millis 毫秒。 如果在millis时间内，该线程没有执行完，那么当前线程进入就绪状态，重新等待cpu调度<br>void join(long millis,int nanos)<br>     等待该线程终止的时间最长为 millis 毫秒 + nanos 纳秒。如果在millis时间内，该线程没有执行完，那么当前线程进入就绪状态，重新等待cpu调度  </p>
-<p>4、设置线程的优先级<br>setPriority(int newPriority)和getPriority()方法来设置和返回一个指定线程的优先级（0~10，用MAX_PRIORITY、MIN_PRIORITY和NORM_PRIORITY三个静态常量来设定优先级，这样才能保证程序最好的可移植性）</p>
-<p>5、后台（守护）线程</p>
-<p>6、正确结束线程<br>Thread.stop()、Thread.suspend、Thread.resume、Runtime.runFinalizersOnExit这些终止线程运行的方法已经被废弃了，使用它们是极端不安全的！想要安全有效的结束一个线程，可以使用下面的方法：</p>
-<p>• 正常执行完run方法，然后结束掉；</p>
-<p>• 控制循环条件和判断条件的标识符来结束掉线程。</p>
-<h3 id="四、线程同步"><a href="#四、线程同步" class="headerlink" title="四、线程同步"></a>四、线程同步</h3><p>1、同步方法    public synchronized void save(){}<br>2、同步代码块    synchronized (this) { count +=money;  }<br>3、使用特殊域变量(volatile)实现线程同步<br>• volatile关键字为域变量的访问提供了一种免锁机制；</p>
-<p>   • 使用volatile修饰域相当于告诉虚拟机该域可能会被其他线程更新；</p>
-<p>   • 因此每次使用该域就要重新计算，而不是使用寄存器中的值；</p>
-<p>   • volatile不会提供任何原子操作，它也不能用来修饰final类型的变量。<br>4、使用重入锁（Lock）实现线程同步</p>
-<h3 id="五、线程通信"><a href="#五、线程通信" class="headerlink" title="五、线程通信"></a>五、线程通信</h3><p>1、借助于Object类的wait()、notify()和notifyAll()实现通信<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">class Resource&#123;  </span><br><span class="line">     private String name;  </span><br><span class="line">     private int count=1;  </span><br><span class="line">     private boolean flag=false;  </span><br><span class="line">     public synchronized void set(String name)&#123;  </span><br><span class="line">         while(flag) /*原先是if,现在改成while，这样生产者线程从冻结状态醒来时，还会再判断flag.*/  </span><br><span class="line">             try&#123;wait();&#125;catch(Exception e)&#123;&#125;  </span><br><span class="line">         this.name=name+&quot;---&quot;+count++;  </span><br><span class="line">         System.out.println(Thread.currentThread().getName()+&quot;...生产者...&quot;+this.name);  </span><br><span class="line">         flag=true;  </span><br><span class="line">         this.notifyAll();/*原先是notity(), 现在改成notifyAll(),这样生产者线程生产完一个商品后可以将等待中的消费者线程唤醒，否则只将上面改成while后，可能出现所有生产者和消费者都在wait()的情况。*/  </span><br><span class="line">     &#125;  </span><br><span class="line">     public synchronized void out()&#123;  </span><br><span class="line">         while(!flag) /*原先是if,现在改成while，这样消费者线程从冻结状态醒来时，还会再判断flag.*/  </span><br><span class="line">             try&#123;wait();&#125;catch(Exception e)&#123;&#125;  </span><br><span class="line">         System.out.println(Thread.currentThread().getName()+&quot;...消费者...&quot;+this.name);  </span><br><span class="line">         flag=false;  </span><br><span class="line">         this.notifyAll(); /*原先是notity(), 现在改成notifyAll(),这样消费者线程消费完一个商品后可以将等待中的生产者线程唤醒，否则只将上面改成while后，可能出现所有生产者和消费者都在wait()的情况。*/  </span><br><span class="line">     &#125;  </span><br><span class="line"> &#125;  </span><br><span class="line"> public class ProducerConsumerDemo&#123;  </span><br><span class="line">     public static void main(String[] args)&#123;  </span><br><span class="line">         Resource r=new Resource();  </span><br><span class="line">         Producer pro=new Producer(r);  </span><br><span class="line">         Consumer con=new Consumer(r);  </span><br><span class="line">         Thread t1=new Thread(pro);  </span><br><span class="line">         Thread t2=new Thread(con);  </span><br><span class="line">         Thread t3=new Thread(pro);  </span><br><span class="line">         Thread t4=new Thread(con);  </span><br><span class="line">         t1.start();  </span><br><span class="line">         t2.start();  </span><br><span class="line">         t3.start();  </span><br><span class="line">         t4.start();  </span><br><span class="line">     &#125;  </span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
-<p>2、使用Condition控制线程通信</p>
-<p>jdk1.5中，提供了多线程的升级解决方案为：</p>
-<p>（1）将同步synchronized替换为显式的Lock操作；</p>
-<p>（2）将Object类中的wait(), notify(),notifyAll()替换成了Condition对象，该对象可以通过Lock锁对象获取;</p>
-<p>（3）一个Lock对象上可以绑定多个Condition对象，这样实现了本方线程只唤醒对方线程，而jdk1.5之前，一个同步只能有一个锁，不同的同步只能用锁来区分，且锁嵌套时容易死锁</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">class Resource&#123;  </span><br><span class="line">private String name;  </span><br><span class="line">private int count=1;  </span><br><span class="line">private boolean flag=false;  </span><br><span class="line">private Lock lock = new ReentrantLock();/*Lock是一个接口，ReentrantLock是该接口的一个直接子类。*/  </span><br><span class="line">private Condition condition_pro=lock.newCondition(); /*创建代表生产者方面的Condition对象*/  </span><br><span class="line">private Condition condition_con=lock.newCondition(); /*使用同一个锁，创建代表消费者方面的Condition对象*/  </span><br><span class="line">  </span><br><span class="line">public void set(String name)&#123;  </span><br><span class="line">    lock.lock();//锁住此语句与lock.unlock()之间的代码  </span><br><span class="line">    try&#123;  </span><br><span class="line">	while(flag)  </span><br><span class="line">	    condition_pro.await(); //生产者线程在conndition_pro对象上等待  </span><br><span class="line">	this.name=name+&quot;---&quot;+count++;  </span><br><span class="line">	System.out.println(Thread.currentThread().getName()+&quot;...生产者...&quot;+this.name);  </span><br><span class="line">	flag=true;  </span><br><span class="line">	 condition_con.signalAll();  </span><br><span class="line">    &#125;  </span><br><span class="line">    finally&#123;  </span><br><span class="line">	lock.unlock(); //unlock()要放在finally块中。  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;  </span><br><span class="line">public void out()&#123;  </span><br><span class="line">    lock.lock(); //锁住此语句与lock.unlock()之间的代码  </span><br><span class="line">    try&#123;  </span><br><span class="line">	while(!flag)  </span><br><span class="line">	    condition_con.await(); //消费者线程在conndition_con对象上等待  </span><br><span class="line">    System.out.println(Thread.currentThread().getName()+&quot;...消费者...&quot;+this.name);  </span><br><span class="line">    flag=false;  </span><br><span class="line">    condition_pro.signqlAll(); /*唤醒所有在condition_pro对象下等待的线程，也就是唤醒所有生产者线程*/  </span><br><span class="line">    &#125;  </span><br><span class="line">    finally&#123;  </span><br><span class="line">	lock.unlock();  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>pass方法内部对name的值的修改并没有改变实际参数i的值。</p>
+<p>特殊情况</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">   ParamTest pt = new ParamTest();</span><br><span class="line"></span><br><span class="line">   User hollis = new User();</span><br><span class="line">   hollis.setName(&quot;Hollis&quot;);</span><br><span class="line">   hollis.setGender(&quot;Male&quot;);</span><br><span class="line">   pt.pass(hollis);</span><br><span class="line">   System.out.println(&quot;print in main , user is &quot; + hollis);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public void pass(User user) &#123;</span><br><span class="line">   user.setName(&quot;hollischuang&quot;);</span><br><span class="line">   System.out.println(&quot;print in pass , user is &quot; + user);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>3、使用阻塞队列（BlockingQueue）控制线程通信</p>
-<h3 id="六、线程池"><a href="#六、线程池" class="headerlink" title="六、线程池"></a>六、线程池</h3><p>newFixedThreadPool() ：<br>     作用：该方法返回一个固定线程数量的线程池，该线程池中的线程数量始终不变，即不会再创建新的线程，也不会销毁已经创建好的线程，自始自终都是那几个固定的线程在工作，所以该线程池可以控制线程的最大并发数。<br>栗子：假如有一个新任务提交时，线程池中如果有空闲的线程则立即使用空闲线程来处理任务，如果没有，则会把这个新任务存在一个任务队列中，一旦有线程空闲了，则按FIFO方式处理任务队列中的任务。</p>
-<p>2、newCachedThreadPool() ：<br>     作用：该方法返回一个可以根据实际情况调整线程池中线程的数量的线程池。即该线程池中的线程数量不确定，是根据实际情况动态调整的。<br>栗子：假如该线程池中的所有线程都正在工作，而此时有新任务提交，那么将会创建新的线程去处理该任务，而此时假如之前有一些线程完成了任务，现在又有新任务提交，那么将不会创建新线程去处理，而是复用空闲的线程去处理新任务。那么此时有人有疑问了，那这样来说该线程池的线程岂不是会越集越多？其实并不会，因为线程池中的线程都有一个“保持活动时间”的参数，通过配置它，如果线程池中的空闲线程的空闲时间超过该“保存活动时间”则立刻停止该线程，而该线程池默认的“保持活动时间”为60s。</p>
-<p>3、newSingleThreadExecutor() ：<br>     作用：该方法返回一个只有一个线程的线程池，即每次只能执行一个线程任务，多余的任务会保存到一个任务队列中，等待这一个线程空闲，当这个线程空闲了再按FIFO方式顺序执行任务队列中的任务。</p>
-<p>4、newScheduledThreadPool() ：<br>     作用：该方法返回一个可以控制线程池内线程定时或周期性执行某任务的线程池。</p>
-<p>5、newSingleThreadScheduledExecutor() ：<br>     作用：该方法返回一个可以控制线程池内线程定时或周期性执行某任务的线程池。只不过和上面的区别是该线程池大小为1，而上面的可以指定线程池的大小。</p>
-<p>execute(Runnable)<br>这个方法接收一个Runnable实例，并且异步的执行</p>
-<p>submit(Runnable)<br>submit(Runnable)和execute(Runnable)区别是前者可以返回一个Future对象，通过返回的Future对象，我们可以检查提交的任务是否执行完毕</p>
-<p>submit(Callable)<br>submit(Callable)和submit(Runnable)类似，也会返回一个Future对象，但是除此之外，submit(Callable)接收的是一个Callable的实现，<br>Callable接口中的call()方法有一个返回值，可以返回任务的执行结果，而Runnable接口中的run()方法是void的，没有返回值。</p>
-<p>1、Java8增强的ForkJoinPool产生线程池<br>当需要处理递归分治算法时，考虑使用ForkJoinPool；<br>仔细设置不再进行任务划分的阈值，这个阈值对性能有影响；<br>Java 8中的一些特性会使用到ForkJoinPool中的通用线程池。在某些场合下，需要调整该线程池的默认的线程数量。</p>
-<h3 id="七、死锁"><a href="#七、死锁" class="headerlink" title="七、死锁"></a>七、死锁</h3><p>（1）死锁的四个必要条件<br>互斥条件：资源不能被共享，只能被同一个进程使用<br>请求与保持条件：已经得到资源的进程可以申请新的资源<br>非剥夺条件：已经分配的资源不能从相应的进程中被强制剥夺<br>循环等待条件：系统中若干进程组成环路，该环路中每个进程都在等待相邻进程占用的资源</p>
-<p> 线程离开运行状态的3种方法：</p>
-<p>1、调用Thread.sleep()：使当前线程睡眠至少多少毫秒（尽管它可能在指定的时间之前被中断）。</p>
-<p>2、调用Thread.yield()：不能保障太多事情，尽管通常它会让当前运行线程回到可运行性状态，使得有相同优先级的线程有机会执行。</p>
-<p>3、调用join()方法：保证当前线程停止执行，直到该线程所加入的线程完成为止。然而，如果它加入的线程没有存活，则当前线程不需要停止。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print in pass , user is User&#123;name=&apos;hollischuang&apos;, gender=&apos;Male&apos;&#125;</span><br><span class="line">print in main , user is User&#123;name=&apos;hollischuang&apos;, gender=&apos;Male&apos;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>pass方法执行后，实参的值虽然被改变，其实还是值传递，因为是把实参对象引用的地址当做值传递给了形式参数，并没有对形参本身进行修改，而是修改的形参持有的地址中存储的内容。</p>
+<p>第二种特殊情况</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">   ParamTest pt = new ParamTest();</span><br><span class="line"></span><br><span class="line">   String name = &quot;Hollis&quot;;</span><br><span class="line">   pt.pass(name);</span><br><span class="line">   System.out.println(&quot;print in main , name is &quot; + name);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public void pass(String name) &#123;</span><br><span class="line">   name = &quot;hollischuang&quot;;</span><br><span class="line">   System.out.println(&quot;print in pass , name is &quot; + name);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print in pass , name is hollischuang</span><br><span class="line">print in main , name is Hollis</span><br></pre></td></tr></table></figure>
+
+<p>这里值没有变是因为直接改变了name的引用的地址，因为这段代码，会new一个String，再把引用交给name，即等价于：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name = new String(&quot;hollischuang&quot;);</span><br></pre></td></tr></table></figure>
+
+<p>而原来的那个”Hollis”字符串还是由实参持有着的，所以，并没有修改到实际参数的值。</p>
+<p><strong>所以，值传递和引用传递的区别并不是传递的内容。而是实参到底有没有被复制一份给形参。在判断实参内容有没有受影响的时候，要看传的的是什么，如果你传递的是个地址，那么就看这个地址的变化会不会有影响，而不是看地址指向的对象的变化。</strong></p>
 
       
     </div>
@@ -555,7 +511,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Thread/" rel="tag"># Thread</a>
+            <a href="/tags/java/" rel="tag"># java</a>
           
         </div>
       
@@ -568,8 +524,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/12/jenkins/" rel="next" title="jenkins">
-                <i class="fa fa-chevron-left"></i> jenkins
+              <a href="/2019/06/25/kafka/" rel="next" title="kafka">
+                <i class="fa fa-chevron-left"></i> kafka
               </a>
             
           </div>
@@ -577,10 +533,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/17/threadabc/" rel="prev" title="'三线程打印ABC三种解法'">
-                '三线程打印ABC三种解法' <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -755,7 +707,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#java线程记录"><span class="nav-text">java线程记录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建线程和启动"><span class="nav-text">创建线程和启动</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#（1）继承Thread类创建线程类"><span class="nav-text">（1）继承Thread类创建线程类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（2）实现Runnable接口创建线程类"><span class="nav-text">（2）实现Runnable接口创建线程类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（3）通过Callable和Future创建线程"><span class="nav-text">（3）通过Callable和Future创建线程</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、线程的生命周期"><span class="nav-text">二、线程的生命周期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、线程管理"><span class="nav-text">三、线程管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、线程同步"><span class="nav-text">四、线程同步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、线程通信"><span class="nav-text">五、线程通信</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#六、线程池"><span class="nav-text">六、线程池</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#七、死锁"><span class="nav-text">七、死锁</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#java基础学习（持续更新）"><span class="nav-text">java基础学习（持续更新）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么重写equals时必须重写hashCode方法？"><span class="nav-text">为什么重写equals时必须重写hashCode方法？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么Java中只有值传递？"><span class="nav-text">为什么Java中只有值传递？</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -926,7 +878,7 @@
   
     <script>
   window.livereOptions = {
-    refer: '2019/06/15/thread/'
+    refer: '2019/06/26/java/'
   };
   (function(d, s) {
     var j, e = d.getElementsByTagName(s)[0];
