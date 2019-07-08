@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[ThreadLocal]]></title>
+    <url>%2F2019%2F07%2F08%2FThreadLocal%2F</url>
+    <content type="text"><![CDATA[ThreadLocal 什么是threadlocal：提供线程内的局部变量，在多线程情况下保证各个线程的threadlocal变量各自独立。 用途：1、多线程环境下对非线程安全对象的并发访问，而且该对象不需要在线程间共享，可以使用ThreadLocal来使得每个线程都持有一个该对象的副本。2、复杂逻辑下的对象传递 原理： 每个Thread线程内部都有一个Map。Map里面存储线程本地对象（key）和线程的变量副本（value）但是，Thread内部的Map是由ThreadLocal维护的，由ThreadLocal负责向map获取和设置线程的变量值。 Hash冲突怎么解决和HashMap的最大的不同在于，ThreadLocalMap结构非常简单，没有next引用，也就是说ThreadLocalMap中解决Hash冲突的方式并非链表的方式，而是采用线性探测的方式，所谓线性探测，就是根据初始key的hashcode值确定元素在table数组中的位置，如果发现这个位置上已经有其他key值的元素被占用，则利用固定的算法寻找一定步长的下个位置，依次判断，直至找到能够存放的位置。 每个ThreadLocal只能保存一个变量副本，如果想要上线一个线程能够保存多个副本以上，就需要创建多个ThreadLocal。ThreadLocal内部的ThreadLocalMap键为弱引用，会有内存泄漏的风险。适用于无状态，副本变量独立后不影响业务逻辑的高并发场景。如果如果业务逻辑强依赖于副本变量，则不适合用ThreadLocal解决，需要另寻解决方案。]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[java基础学习]]></title>
     <url>%2F2019%2F06%2F26%2Fjava%2F</url>
     <content type="text"><![CDATA[java基础学习（持续更新）java基础学习 为什么重写equals时必须重写hashCode方法？Object.hashCode的通用约定：如果两个对象根据equals(Object)方法是相等的，那么调用这两个对象中任一个对象的hashCode方法必须产生同样的整数结果。如果只重写了equals，s1.equals(s2)返回true。原生的hashCode值是根据内存地址换算出来的一个值。s1 s2的hashcode必然不相同，违背了上面的约定。对于HashSet和HashMap这些基于散列值（hash）实现的类，数组的下标是根据传入的元素hashCode方法的返回值再和特定的值异或决定的，如果不重写hashCode的话，可能导致HashSet、HashMap不能正常的运作。 为什么Java中只有值传递？值传递（pass by value）是指在调用函数时将实际参数复制一份传递到函数中，这样在函数中如果对参数进行修改，将不会影响到实际参数。引用传递（pass by reference）是指在调用函数时将实际参数的地址直接传递到函数中，那么在函数中对参数所进行的修改，将影响到实际参数。 123456789101112public static void main(String[] args) &#123; ParamTest pt = new ParamTest(); int i = 10; pt.pass(i ); System.out.println(&quot;print in main , i is &quot; + i);&#125;public void pass(int j) &#123; j = 20; System.out.println(&quot;print in pass , j is &quot; + j);&#125; 12print in pass , j is 20print in main , i is 10 pass方法内部对name的值的修改并没有改变实际参数i的值。 特殊情况 1234567891011121314public static void main(String[] args) &#123; ParamTest pt = new ParamTest(); User hollis = new User(); hollis.setName(&quot;Hollis&quot;); hollis.setGender(&quot;Male&quot;); pt.pass(hollis); System.out.println(&quot;print in main , user is &quot; + hollis);&#125;public void pass(User user) &#123; user.setName(&quot;hollischuang&quot;); System.out.println(&quot;print in pass , user is &quot; + user);&#125; 12print in pass , user is User&#123;name=&apos;hollischuang&apos;, gender=&apos;Male&apos;&#125;print in main , user is User&#123;name=&apos;hollischuang&apos;, gender=&apos;Male&apos;&#125; pass方法执行后，实参的值虽然被改变，其实还是值传递，因为是把实参对象引用的地址当做值传递给了形式参数，并没有对形参本身进行修改，而是修改的形参持有的地址中存储的内容。 第二种特殊情况 123456789101112public static void main(String[] args) &#123; ParamTest pt = new ParamTest(); String name = &quot;Hollis&quot;; pt.pass(name); System.out.println(&quot;print in main , name is &quot; + name);&#125;public void pass(String name) &#123; name = &quot;hollischuang&quot;; System.out.println(&quot;print in pass , name is &quot; + name);&#125; 12print in pass , name is hollischuangprint in main , name is Hollis 这里值没有变是因为直接改变了name的引用的地址，因为这段代码，会new一个String，再把引用交给name，即等价于： 1name = new String(&quot;hollischuang&quot;); 而原来的那个”Hollis”字符串还是由实参持有着的，所以，并没有修改到实际参数的值。 所以，值传递和引用传递的区别并不是传递的内容。而是实参到底有没有被复制一份给形参。在判断实参内容有没有受影响的时候，要看传的的是什么，如果你传递的是个地址，那么就看这个地址的变化会不会有影响，而不是看地址指向的对象的变化。]]></content>

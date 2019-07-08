@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/liuguoxiong/"/>
-  <updated>2019-06-26T02:26:56.775Z</updated>
+  <updated>2019-07-08T09:59:05.183Z</updated>
   <id>https://github.com/liuguoxiong/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ThreadLocal</title>
+    <link href="https://github.com/liuguoxiong/2019/07/08/ThreadLocal/"/>
+    <id>https://github.com/liuguoxiong/2019/07/08/ThreadLocal/</id>
+    <published>2019-07-08T09:49:34.000Z</published>
+    <updated>2019-07-08T09:59:05.183Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;ThreadLocal&quot;&gt;&lt;a href=&quot;#ThreadLocal&quot; class=&quot;headerlink&quot; title=&quot;ThreadLocal&quot;&gt;&lt;/a&gt;ThreadLocal&lt;/h2&gt;
+    
+    </summary>
+    
+      <category term="java" scheme="https://github.com/liuguoxiong/categories/java/"/>
+    
+    
+      <category term="java" scheme="https://github.com/liuguoxiong/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>java基础学习</title>
