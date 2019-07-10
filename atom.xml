@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/liuguoxiong/"/>
-  <updated>2019-07-08T09:59:05.183Z</updated>
+  <updated>2019-07-10T08:37:37.935Z</updated>
   <id>https://github.com/liuguoxiong/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>&#39;springboot启动&#39;</title>
+    <link href="https://github.com/liuguoxiong/2019/07/10/springboot%E5%90%AF%E5%8A%A8/"/>
+    <id>https://github.com/liuguoxiong/2019/07/10/springboot启动/</id>
+    <published>2019-07-10T06:22:46.000Z</published>
+    <updated>2019-07-10T08:37:37.935Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;一、springboot启动原理&quot;&gt;&lt;a href=&quot;#一、springboot启动原理&quot; class=&quot;headerlink&quot; title=&quot;一、springboot启动原理&quot;&gt;&lt;/a&gt;一、springboot启动原理&lt;/h2&gt;
+    
+    </summary>
+    
+      <category term="springboot" scheme="https://github.com/liuguoxiong/categories/springboot/"/>
+    
+    
+      <category term="springboot" scheme="https://github.com/liuguoxiong/tags/springboot/"/>
+    
+  </entry>
   
   <entry>
     <title>ThreadLocal</title>

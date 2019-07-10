@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="jenkins+github自动部署项目遇到的问题">
-<meta name="keywords" content="jenkins">
+  <meta name="description" content="一、springboot启动原理">
+<meta name="keywords" content="springboot">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jenkins">
-<meta property="og:url" content="https://github.com/liuguoxiong/2019/06/12/jenkins/index.html">
+<meta property="og:title" content="&#39;springboot启动&#39;">
+<meta property="og:url" content="https://github.com/liuguoxiong/2019/07/10/springboot启动/index.html">
 <meta property="og:site_name" content="陌生">
-<meta property="og:description" content="jenkins+github自动部署项目遇到的问题">
+<meta property="og:description" content="一、springboot启动原理">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-18T06:41:50.070Z">
+<meta property="og:updated_time" content="2019-07-10T08:37:37.935Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jenkins">
-<meta name="twitter:description" content="jenkins+github自动部署项目遇到的问题">
+<meta name="twitter:title" content="&#39;springboot启动&#39;">
+<meta name="twitter:description" content="一、springboot启动原理">
 
 
 
@@ -117,7 +117,7 @@
 
   
   
-  <link rel="canonical" href="https://github.com/liuguoxiong/2019/06/12/jenkins/">
+  <link rel="canonical" href="https://github.com/liuguoxiong/2019/07/10/springboot启动/">
 
 
 
@@ -127,7 +127,7 @@
   };
 </script>
 
-  <title>jenkins | 陌生</title>
+  <title>'springboot启动' | 陌生</title>
   
 
 
@@ -359,7 +359,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/liuguoxiong/2019/06/12/jenkins/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/liuguoxiong/2019/07/10/springboot启动/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Liuguoxiong">
@@ -376,7 +376,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">jenkins
+          <h1 class="post-title" itemprop="name headline">'springboot启动'
 
               
             
@@ -402,24 +402,12 @@
                 
               
 
-              <time title="创建时间：2019-06-12 16:04:48" itemprop="dateCreated datePublished" datetime="2019-06-12T16:04:48+08:00">2019-06-12</time>
+              <time title="创建时间：2019-07-10 14:22:46 / 修改时间：16:37:37" itemprop="dateCreated datePublished" datetime="2019-07-10T14:22:46+08:00">2019-07-10</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-06-18 14:41:50" itemprop="dateModified" datetime="2019-06-18T14:41:50+08:00">2019-06-18</time>
               
             
           </span>
@@ -436,7 +424,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/jenkins/" itemprop="url" rel="index"><span itemprop="name">jenkins</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/springboot/" itemprop="url" rel="index"><span itemprop="name">springboot</span></a></span>
 
                 
                 
@@ -475,10 +463,57 @@
       
 
       
-        <h3 id="jenkins-github自动部署项目遇到的问题"><a href="#jenkins-github自动部署项目遇到的问题" class="headerlink" title="jenkins+github自动部署项目遇到的问题"></a>jenkins+github自动部署项目遇到的问题</h3><a id="more"></a>
+        <h2 id="一、springboot启动原理"><a href="#一、springboot启动原理" class="headerlink" title="一、springboot启动原理"></a>一、springboot启动原理</h2><a id="more"></a>    
+<p>springboot项目都会用到这个类：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@SpringBootApplication</span><br><span class="line">public class Application &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        SpringApplication.run(Application.class, args);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h4 id="jenkins重启命令"><a href="#jenkins重启命令" class="headerlink" title="jenkins重启命令"></a>jenkins重启命令</h4><p>service jenkins restart</p>
-<h4 id="jenkins构建项目后会杀死字进程解决办法"><a href="#jenkins构建项目后会杀死字进程解决办法" class="headerlink" title="jenkins构建项目后会杀死字进程解决办法"></a>jenkins构建项目后会杀死字进程解决办法</h4><p>export BUILD_ID=dontKillMe<br>nohup java -jar  /home/cloud/run/spring-boot-0.0.1-SNAPSHOT.jar &gt;/dev/null 2&gt;&amp;1 &amp;<br>sleep 10s</p>
+<p>最关键的是 <strong>@SpringBootApplication注解和SpringApplication.run()方法</strong> 两点</p>
+<hr>
+<h3 id="SpringBootApplication注解"><a href="#SpringBootApplication注解" class="headerlink" title="@SpringBootApplication注解"></a>@SpringBootApplication注解</h3><p>它其实是由多个注解组成的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">@Target(ElementType.TYPE)</span><br><span class="line">@Retention(RetentionPolicy.RUNTIME)</span><br><span class="line">@Documented</span><br><span class="line">@Inherited</span><br><span class="line">@SpringBootConfiguration</span><br><span class="line">@EnableAutoConfiguration</span><br><span class="line">@ComponentScan(excludeFilters = &#123;</span><br><span class="line">		@Filter(type = FilterType.CUSTOM, classes = TypeExcludeFilter.class),</span><br><span class="line">		@Filter(type = FilterType.CUSTOM, classes = AutoConfigurationExcludeFilter.class) &#125;)</span><br><span class="line">public @interface SpringBootApplication &#123;</span><br><span class="line">...&#125;</span><br></pre></td></tr></table></figure>
+
+<p>前4个注解是元注解作用为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Java四大元注解：</span><br><span class="line"> * 1.@Target ：用于描述注解的使用范围，也就是说使用了@Target去定义一个注解，那么可以决定定义好的注解能用在什么地方</span><br><span class="line"> *    内部值：ElementType[]  value()数组， value值类型   ElementType枚举类型</span><br><span class="line"> *    元注解中的枚举值决定了，一个注解可以标记的范围</span><br><span class="line"> *      TYPE ： 类型上面  用于描述类、接口(包括注解类型) 或enum声明</span><br><span class="line"> *      FIELD ： 用于描述字段</span><br><span class="line"> *      METHOD ：方法</span><br><span class="line"> *      PARAMETER ： 参数 【参数名】</span><br><span class="line"> *      CONSTRUCTOR ： 构造方法</span><br><span class="line"> *      LOCAL_VARIABLE ： 局部变量</span><br><span class="line"> *      ANNOTATION_TYPE ： 可以打在注解上面</span><br><span class="line"> *      PACKAGE ：可以打在包上面</span><br><span class="line"> *      TYPE_PARAMETER ： 参数类型【形式参数类型】</span><br><span class="line"> *      TYPE_USE ： 任何位置都可以</span><br><span class="line"> * 2.@Retention：用于描述一个注解存在的生命周期【源码，字节码文件，运行时】</span><br><span class="line"> * 	    内部值：RetentionPolicy value();非数组，意味着只能一个值：</span><br><span class="line"> * 	    值类型：枚举值RetentionPolicy：几个值决定了几个状态：如下几个值</span><br><span class="line"> * 		SOURCE ：表示一个注解可以存在于源码中==&gt;java的源码中</span><br><span class="line"> *      CLASS ：表示 一个注解可以在源码中，并且可以在字节码文件中</span><br><span class="line"> *      RUNTIME ：表示 一个注解可以在源码、字节码、及运行时期该注解都会存在</span><br><span class="line"> * 3.@Document ：表示该注解是否可以生成到 API文档中 ==》即生成API文档的时 检验</span><br><span class="line"> * 4.@Inherited ：表示一个【注解】能够被继承</span><br><span class="line"> * 	    不是说注解与注解之间能否相互继承</span><br><span class="line"> *    而是说：一个类A被注解了，那么另外一个类B，继承了A类</span><br><span class="line"> * 	  B类能够继承到A类中，的注解 (即被@Inherited注解过的注解)</span><br></pre></td></tr></table></figure>
+
+<p>实际重要的有3个</p>
+<ul>
+<li>@SpringBootConfiguration 其实还是使用了 @Configuration</li>
+<li>@ComponentScan</li>
+<li>@EnableAutoConfiguration</li>
+</ul>
+<h4 id="Configuration"><a href="#Configuration" class="headerlink" title="@Configuration"></a>@Configuration</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">public class MockConfiguration&#123;</span><br><span class="line">    @Bean</span><br><span class="line">    public MockService mockService()&#123;</span><br><span class="line">        return new MockServiceImpl();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>任何一个标注了@Configuration的Java类定义都是一个JavaConfig配置类<br>任何一个标注了@Bean的方法，其返回值将作为一个bean定义注册到Spring的IoC容器，方法名将默认成该bean定义的id</p>
+<h3 id="ComponentScan"><a href="#ComponentScan" class="headerlink" title="@ComponentScan"></a>@ComponentScan</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@ComponentScan(excludeFilters = &#123;</span><br><span class="line">		@Filter(type = FilterType.CUSTOM, classes = TypeExcludeFilter.class),</span><br><span class="line">		@Filter(type = FilterType.CUSTOM, classes = AutoConfigurationExcludeFilter.class) &#125;)</span><br></pre></td></tr></table></figure>
+
+<p>用于类或接口上主要是指定扫描路径，spring会把指定路径下带有指定注解的类自动装配到bean容器里。会被自动装配的注解包括@Controller、@Service、@Component、@Repository等等<br>常用属性如下：</p>
+<ul>
+<li>basePackages、value：指定扫描路径，如果为空则以@ComponentScan注解的类所在的包为基本的扫描路径</li>
+<li>basePackageClasses：指定具体扫描的类</li>
+<li>includeFilters：指定满足Filter条件的类</li>
+<li>excludeFilters：指定排除Filter条件的类<br>includeFilters和excludeFilters 的FilterType可选：ANNOTATION=注解类型 默认、ASSIGNABLE_TYPE(指定固定类)、ASPECTJ(ASPECTJ类型)、REGEX(正则表达式)、CUSTOM(自定义类型)，自定义的Filter需要实现TypeFilter接口</li>
+</ul>
+<h3 id="EnableAutoConfiguration"><a href="#EnableAutoConfiguration" class="headerlink" title="@EnableAutoConfiguration"></a>@EnableAutoConfiguration</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@SuppressWarnings(&quot;deprecation&quot;)</span><br><span class="line">@Target(ElementType.TYPE)</span><br><span class="line">@Retention(RetentionPolicy.RUNTIME)</span><br><span class="line">@Documented</span><br><span class="line">@Inherited</span><br><span class="line">@AutoConfigurationPackage</span><br><span class="line">@Import(EnableAutoConfigurationImportSelector.class)</span><br><span class="line">public @interface EnableAutoConfiguration &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其中，最关键的要属@Import(EnableAutoConfigurationImportSelector.class)，借助EnableAutoConfigurationImportSelector，<br>@EnableAutoConfiguration可以帮助SpringBoot应用将所有符合条件的@Configuration配置都加载到当前SpringBoot创建并使用的IoC容器。</p>
+<p><strong>@EnableAutoConfiguration自动配置变成了：从classpath中搜寻所有的META-INF/spring.factories配置文件，并将其中org.springframework.boot.autoconfigure.EnableutoConfiguration对应的配置项<br>通过反射（Java Refletion）实例化为对应的标注了@Configuration的JavaConfig形式的IoC容器配置类，然后汇总为一个并加载到IoC容器。</strong></p>
+<h2 id="二、SpringApplication执行流程"><a href="#二、SpringApplication执行流程" class="headerlink" title="二、SpringApplication执行流程"></a>二、SpringApplication执行流程</h2><p> <strong>启动流程：</strong><br> 每个SpringBoot程序都有一个主入口，也就是main方法，main里面调用SpringApplication.run()<br> 启动整个spring-boot程序，该方法所在类需要使用@SpringBootApplication注解，@SpringBootApplication包括三个注解，功能如下：</p>
+<ul>
+<li>@EnableAutoConfiguration：SpringBoot根据应用所声明的依赖来对Spring框架进行自动配置。</li>
+<li>@SpringBootConfiguration(内部为@Configuration)：被标注的类等于在spring的XML配置文件中(applicationContext.xml)，装配所有bean事务，提供了一个spring的上下文环境。</li>
+<li>@ComponentScan：组件扫描，可自动发现和装配Bean，默认扫描SpringApplication的run方法里的Booter.class所在的包路径下文件，所以最好将该启动类放到根包路径下。</li>
+</ul>
+<p><strong>SpringBoot启动类</strong><br>首先进入run方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public static ConfigurableApplicationContext run(Class&lt;?&gt;[] primarySources,</span><br><span class="line">		String[] args) &#123;</span><br><span class="line">	return new SpringApplication(primarySources).run(args);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>run方法中去创建了一个SpringApplication实例，然后执行run方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">public ConfigurableApplicationContext run(String... args) &#123;</span><br><span class="line">	StopWatch stopWatch = new StopWatch();</span><br><span class="line">	stopWatch.start();</span><br><span class="line">	ConfigurableApplicationContext context = null;</span><br><span class="line">	Collection&lt;SpringBootExceptionReporter&gt; exceptionReporters = new ArrayList&lt;&gt;();</span><br><span class="line">	configureHeadlessProperty();</span><br><span class="line">	SpringApplicationRunListeners listeners = getRunListeners(args);</span><br><span class="line">	listeners.starting();</span><br><span class="line">	try &#123;</span><br><span class="line">		ApplicationArguments applicationArguments = new DefaultApplicationArguments(</span><br><span class="line">				args);</span><br><span class="line">		ConfigurableEnvironment environment = prepareEnvironment(listeners,</span><br><span class="line">				applicationArguments);</span><br><span class="line">		configureIgnoreBeanInfo(environment);</span><br><span class="line">		Banner printedBanner = printBanner(environment);</span><br><span class="line">		context = createApplicationContext();</span><br><span class="line">		exceptionReporters = getSpringFactoriesInstances(</span><br><span class="line">				SpringBootExceptionReporter.class,</span><br><span class="line">				new Class[] &#123; ConfigurableApplicationContext.class &#125;, context);</span><br><span class="line">		prepareContext(context, environment, listeners, applicationArguments,</span><br><span class="line">				printedBanner);</span><br><span class="line">		refreshContext(context);</span><br><span class="line">		afterRefresh(context, applicationArguments);</span><br><span class="line">		stopWatch.stop();</span><br><span class="line">		if (this.logStartupInfo) &#123;</span><br><span class="line">			new StartupInfoLogger(this.mainApplicationClass)</span><br><span class="line">					.logStarted(getApplicationLog(), stopWatch);</span><br><span class="line">		&#125;</span><br><span class="line">		listeners.started(context);</span><br><span class="line">		callRunners(context, applicationArguments);</span><br><span class="line">	&#125;</span><br><span class="line">	catch (Throwable ex) &#123;</span><br><span class="line">		handleRunFailure(context, ex, exceptionReporters, listeners);</span><br><span class="line">		throw new IllegalStateException(ex);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	try &#123;</span><br><span class="line">		listeners.running(context);</span><br><span class="line">	&#125;</span><br><span class="line">	catch (Throwable ex) &#123;</span><br><span class="line">		handleRunFailure(context, ex, exceptionReporters, null);</span><br><span class="line">		throw new IllegalStateException(ex);</span><br><span class="line">	&#125;</span><br><span class="line">	return context;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>该方法中实现了如下几个关键步骤：<br>1.创建了应用的监听器SpringApplicationRunListeners并开始监听<br>2.加载SpringBoot配置环境(ConfigurableEnvironment)，如果是通过web容器发布，会加载StandardEnvironment，其最终也是继承了ConfigurableEnvironment<br>3.配置环境(Environment)加入到监听器对象中(SpringApplicationRunListeners)<br>创建run方法的返回对象：ConfigurableApplicationContext(应用配置上下文)<br>创建方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">protected ConfigurableApplicationContext createApplicationContext() &#123;</span><br><span class="line">	Class&lt;?&gt; contextClass = this.applicationContextClass;</span><br><span class="line">	if (contextClass == null) &#123;</span><br><span class="line">		try &#123;</span><br><span class="line">			switch (this.webApplicationType) &#123;</span><br><span class="line">			case SERVLET:</span><br><span class="line">				contextClass = Class.forName(DEFAULT_WEB_CONTEXT_CLASS);</span><br><span class="line">				break;</span><br><span class="line">			case REACTIVE:</span><br><span class="line">				contextClass = Class.forName(DEFAULT_REACTIVE_WEB_CONTEXT_CLASS);</span><br><span class="line">				break;</span><br><span class="line">			default:</span><br><span class="line">				contextClass = Class.forName(DEFAULT_CONTEXT_CLASS);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		catch (ClassNotFoundException ex) &#123;</span><br><span class="line">			throw new IllegalStateException(</span><br><span class="line">					&quot;Unable create a default ApplicationContext, &quot;</span><br><span class="line">							+ &quot;please specify an ApplicationContextClass&quot;,</span><br><span class="line">					ex);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return (ConfigurableApplicationContext) BeanUtils.instantiateClass(contextClass);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>方法会先获取显式设置的应用上下文(applicationContextClass)，如果不存在，再加载默认的环境配置（通过是否是web environment判断），默认选择AnnotationConfigApplicationContext注解上下文（通过扫描所有注解类来加载bean），最后通过BeanUtils实例化上下文对象，并返回。<br>5.回到run方法内，prepareContext方法将listeners、environment、applicationArguments、banner等重要组件与上下文对象关联<br>6.接下来的refreshContext(context)方法(初始化方法如下)将是实现spring-boot-starter-*(mybatis、redis等)自动化配置的关键，包括spring.factories的加载，bean的实例化等核心工作。<br>配置结束后，Springboot做了一些基本的收尾工作，返回了应用环境上下文。回顾整体流程，Springboot的启动，主要创建了配置环境(environment)、事件监听(listeners)、应用上下文(applicationContext)，并基于以上条件，在容器中开始实例化我们需要的Bean，至此，通过SpringBoot启动的程序已经构造完成</p>
+<h3 id="SpringBoot自动配置模块"><a href="#SpringBoot自动配置模块" class="headerlink" title="SpringBoot自动配置模块"></a>SpringBoot自动配置模块</h3><p>该配置模块的主要使用到了SpringFactoriesLoader，即Spring工厂加载器，该对象提供了loadFactoryNames方法，<br>入参为factoryClass和classLoader，即需要传入上图中的工厂类名称和对应的类加载器，方法会根据指定的classLoader，<br>加载该类加器搜索路径下的指定文件，即spring.factories文件，传入的工厂类为接口，而文件中对应的类则是接口的实现类，<br>或最终作为实现类，所以文件中一般为如下图这种一对多的类名集合，获取到这些实现类的类名后，loadFactoryNames方法返回类名集合，<br>方法调用方得到这些集合后，再通过反射获取这些类的类对象、构造方法，最终生成实例。</p>
 
       
     </div>
@@ -502,7 +537,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/jenkins/" rel="tag"># jenkins</a>
+            <a href="/tags/springboot/" rel="tag"># springboot</a>
           
         </div>
       
@@ -515,8 +550,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/30/hello-world/" rel="next" title="redis学习">
-                <i class="fa fa-chevron-left"></i> redis学习
+              <a href="/2019/07/08/ThreadLocal/" rel="next" title="ThreadLocal">
+                <i class="fa fa-chevron-left"></i> ThreadLocal
               </a>
             
           </div>
@@ -524,10 +559,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/15/thread/" rel="prev" title="java线程记录">
-                java线程记录 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -706,7 +737,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#jenkins-github自动部署项目遇到的问题"><span class="nav-text">jenkins+github自动部署项目遇到的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#jenkins重启命令"><span class="nav-text">jenkins重启命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jenkins构建项目后会杀死字进程解决办法"><span class="nav-text">jenkins构建项目后会杀死字进程解决办法</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、springboot启动原理"><span class="nav-text">一、springboot启动原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SpringBootApplication注解"><span class="nav-text">@SpringBootApplication注解</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Configuration"><span class="nav-text">@Configuration</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ComponentScan"><span class="nav-text">@ComponentScan</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#EnableAutoConfiguration"><span class="nav-text">@EnableAutoConfiguration</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、SpringApplication执行流程"><span class="nav-text">二、SpringApplication执行流程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SpringBoot自动配置模块"><span class="nav-text">SpringBoot自动配置模块</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -877,7 +908,7 @@
   
     <script>
   window.livereOptions = {
-    refer: '2019/06/12/jenkins/'
+    refer: '2019/07/10/springboot启动/'
   };
   (function(d, s) {
     var j, e = d.getElementsByTagName(s)[0];
