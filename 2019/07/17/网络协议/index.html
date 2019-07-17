@@ -96,18 +96,20 @@
 
 
 
-  <meta name="description" content="算法">
+  <meta name="description" content="网络协议">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="sort">
-<meta property="og:url" content="https://github.com/liuguoxiong/2019/07/16/sort/index.html">
+<meta property="og:title" content="网络协议">
+<meta property="og:url" content="https://github.com/liuguoxiong/2019/07/17/网络协议/index.html">
 <meta property="og:site_name" content="陌生">
-<meta property="og:description" content="算法">
+<meta property="og:description" content="网络协议">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-17T03:31:49.470Z">
+<meta property="og:image" content="https://github.com/images/http.png">
+<meta property="og:updated_time" content="2019-07-17T08:41:06.732Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sort">
-<meta name="twitter:description" content="算法">
+<meta name="twitter:title" content="网络协议">
+<meta name="twitter:description" content="网络协议">
+<meta name="twitter:image" content="https://github.com/images/http.png">
 
 
 
@@ -117,7 +119,7 @@
 
   
   
-  <link rel="canonical" href="https://github.com/liuguoxiong/2019/07/16/sort/">
+  <link rel="canonical" href="https://github.com/liuguoxiong/2019/07/17/网络协议/">
 
 
 
@@ -127,7 +129,7 @@
   };
 </script>
 
-  <title>sort | 陌生</title>
+  <title>网络协议 | 陌生</title>
   
 
 
@@ -359,7 +361,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/liuguoxiong/2019/07/16/sort/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/liuguoxiong/2019/07/17/网络协议/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Liuguoxiong">
@@ -376,7 +378,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">sort
+          <h1 class="post-title" itemprop="name headline">网络协议
 
               
             
@@ -402,46 +404,16 @@
                 
               
 
-              <time title="创建时间：2019-07-16 17:14:42" itemprop="dateCreated datePublished" datetime="2019-07-16T17:14:42+08:00">2019-07-16</time>
+              <time title="创建时间：2019-07-17 14:44:34 / 修改时间：16:41:06" itemprop="dateCreated datePublished" datetime="2019-07-17T14:44:34+08:00">2019-07-17</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-07-17 11:31:49" itemprop="dateModified" datetime="2019-07-17T11:31:49+08:00">2019-07-17</time>
               
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -475,28 +447,72 @@
       
 
       
-        <h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><a id="more"></a>
-
-<h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><p>比较相邻的元素。如果第一个比第二个大，就交换它们两个</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">     int[] ar = &#123;10,36,3,5,15,7,88,55,30,21,77,58&#125;;</span><br><span class="line">    for (int i = 0; i &lt; ar.length-1; i++) &#123;</span><br><span class="line">        for (int j=0;j&lt;ar.length-1-i;j++)&#123;</span><br><span class="line">            int a=ar[j+1];</span><br><span class="line">            if(ar[j]&gt;ar[j+1])&#123;</span><br><span class="line">                ar[j+1]=ar[j];</span><br><span class="line">                ar[j]=a;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(Arrays.toString(ar));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>最佳情况：T(n) = O(n)   最差情况：T(n) = O(n2)   平均情况：T(n) = O(n2)</strong></p>
-<h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><p>首先在未排序序列中找到最小（大）元素，存放到排序序列的起始位置，然后，再从剩余未排序元素中继续寻找最小（大）元素，然后放到已排序序列的末尾。以此类推，直到所有元素均排序完毕。 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    int[] ar = &#123;10, 36, 3, 5, 15, 7, 88, 55, 30, 21, 77, 58&#125;;</span><br><span class="line">    for (int i = 0; i &lt; ar.length; i++) &#123;</span><br><span class="line">        int minIndex = i;</span><br><span class="line">        for (int j = i; j &lt; ar.length; j++) &#123;</span><br><span class="line">            if (ar[j] &lt; ar[minIndex]) &#123;</span><br><span class="line">                minIndex = j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        int temp = ar[minIndex];</span><br><span class="line">        ar[minIndex] = ar[i];</span><br><span class="line">        ar[i] = temp;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    System.out.println( Arrays.toString( ar ) );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>最佳情况：T(n) = O(n2)  最差情况：T(n) = O(n2)  平均情况：T(n) = O(n2)</strong></p>
-<h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3><p>1从第一个元素开始，该元素可以认为已经被排序；<br>2取出下一个元素，在已经排序的元素序列中从后向前扫描；<br>3如果该元素（已排序）大于新元素，将该元素移到下一位置；<br>4重复步骤3，直到找到已排序的元素小于或者等于新元素的位置；<br>5将新元素插入到该位置后；<br>重复步骤2~5。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    int[] ar = &#123;10, 36, 3, 5, 15, 7, 88, 55, 30, 21, 77, 58&#125;;</span><br><span class="line">    int temp;</span><br><span class="line">    for (int i = 1; i &lt; ar.length; i++) &#123;</span><br><span class="line">        temp = ar[i];</span><br><span class="line">        while (i&gt;0&amp;&amp;ar[i - 1] &gt; temp) &#123;</span><br><span class="line">            ar[i] = ar[i - 1];</span><br><span class="line">            i--;</span><br><span class="line">        &#125;</span><br><span class="line">        ar[i] = temp;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    System.out.println( Arrays.toString( ar ) );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>最佳情况：T(n) = O(n)   最坏情况：T(n) = O(n2)   平均情况：T(n) = O(n2)</strong></p>
-<h3 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h3><p>希尔排序是把记录按下表的一定增量分组，对每组使用直接插入排序算法排序；随着增量逐渐减少，每组包含的关键词越来越多，当增量减至1时，整个文件恰被分成一组，算法便终止。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    int[] array = &#123;10, 36, 3, 5, 15, 7, 88, 55, 30, 21, 77, 58&#125;;</span><br><span class="line">    int len = array.length;</span><br><span class="line">    int temp, gap = len / 2;</span><br><span class="line">    while (gap &gt; 0) &#123;</span><br><span class="line">        for (int i = gap; i &lt; len; i++) &#123;</span><br><span class="line">            temp = array[i];</span><br><span class="line">            int preIndex = i - gap;</span><br><span class="line">            while (preIndex &gt;= 0 &amp;&amp; array[preIndex] &gt; temp) &#123;</span><br><span class="line">                array[preIndex + gap] = array[preIndex];</span><br><span class="line">                preIndex -= gap;</span><br><span class="line">            &#125;</span><br><span class="line">            array[preIndex + gap] = temp;</span><br><span class="line">        &#125;</span><br><span class="line">        gap /= 2;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    System.out.println( Arrays.toString( array ) );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>*<em>最佳情况：T(n) = O(nlog2 n)  最坏情况：T(n) = O(nlog2 n)  平均情况：T(n) =O(nlog2n)　*</em></p>
-<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p>通过一趟排序将待排记录分隔成独立的两部分，其中一部分记录的关键字均比另一部分的关键字小，则可分别对这两部分记录继续进行排序，以达到整个序列有序。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">     * 快速排序方法</span><br><span class="line">     * @param array</span><br><span class="line">     * @param start</span><br><span class="line">     * @param end</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    public static int[] QuickSort(int[] array, int start, int end) &#123;</span><br><span class="line">        if (array.length &lt; 1 || start &lt; 0 || end &gt;= array.length || start &gt; end) return null;</span><br><span class="line">        int smallIndex = partition(array, start, end);</span><br><span class="line">        if (smallIndex &gt; start)</span><br><span class="line">            QuickSort(array, start, smallIndex - 1);</span><br><span class="line">        if (smallIndex &lt; end)</span><br><span class="line">            QuickSort(array, smallIndex + 1, end);</span><br><span class="line">        return array;</span><br><span class="line">    &#125;</span><br><span class="line">    /**</span><br><span class="line">     * 快速排序算法——partition</span><br><span class="line">     * @param array</span><br><span class="line">     * @param start</span><br><span class="line">     * @param end</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    public static int partition(int[] array, int start, int end) &#123;</span><br><span class="line">        int pivot = (int) (start + Math.random() * (end - start + 1));</span><br><span class="line">        int smallIndex = start - 1;</span><br><span class="line">        swap(array, pivot, end);</span><br><span class="line">        for (int i = start; i &lt;= end; i++)</span><br><span class="line">            if (array[i] &lt;= array[end]) &#123;</span><br><span class="line">                smallIndex++;</span><br><span class="line">                if (i &gt; smallIndex)</span><br><span class="line">                    swap(array, i, smallIndex);</span><br><span class="line">            &#125;</span><br><span class="line">        return smallIndex;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 交换数组内两个元素</span><br><span class="line">     * @param array</span><br><span class="line">     * @param i</span><br><span class="line">     * @param j</span><br><span class="line">     */</span><br><span class="line">    public static void swap(int[] array, int i, int j) &#123;</span><br><span class="line">        int temp = array[i];</span><br><span class="line">        array[i] = array[j];</span><br><span class="line">        array[j] = temp;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<p>*<em>最佳情况：T(n) = O(nlogn)   最差情况：T(n) = O(n2)   平均情况：T(n) = O(nlogn)　*</em></p>
+        <h2 id="网络协议"><a href="#网络协议" class="headerlink" title="网络协议"></a>网络协议</h2><a id="more"></a>
+<p><strong>首先要了解网络协议的物理设备是怎么工作的</strong><br>两台电脑要互联，通过网线将电脑a和b的网口（usb）相连</p>
+<h3 id="集线器"><a href="#集线器" class="headerlink" title="集线器"></a>集线器</h3><p>如何有多台电脑，每个电脑只有一个网口，如何相连呢？于是有了集线器，起到了一个将网线集结起来的作用，实现最初级的网络互通</p>
+<h3 id="交换机"><a href="#交换机" class="headerlink" title="交换机"></a>交换机</h3><p>然而集线器有一个问题，由于和每台设备相连，他不能分辨出具体信息是发送给谁的，只能广泛地广播出去。<br>比如a想发给c，结果b，d，e。。。都收到了消息。<br>所以我们给这台设备加入一个指令，让他可以根据网口名称自动寻址传输数据。<br>比如我把A的网口命名为macA，将C的命名为macC，这时如果A想要将数据传给C，则设备会根据网口名称macA和macC自动将资料从A的电脑传送到C的电脑中，而不让B、D和E收到。（这里的macA, macB指的就是MAC地址）<br>也就是说，这台设备解决了冲突的问题，实现了任意两台电脑间的互联，大大地提升了网络间的传输速度，我们把它叫做交换机。</p>
+<h3 id="路由器"><a href="#路由器" class="headerlink" title="路由器"></a>路由器</h3><p>为了保证不同地方能通信，需要采用同样的信息传送形式，信息经协议加工成统一形式，再经由一个特殊的设备传送出去。这个设备就叫做路由器。<br>在这套协议中，每个机器都被赋予了一个IP地址，相当于一个门牌号一样。路由器通过IP地址寻址，我们说它工作在计算机的网络层。这一套协议便是TCP/IP协议簇，互联网也便这样形成了。</p>
+<h3 id="五层模型"><a href="#五层模型" class="headerlink" title="五层模型"></a>五层模型</h3><p>互联网的实现，分成好几层。每一层都有自己的功能：</p>
+<ul>
+<li>应用层（Application Layer)</li>
+<li>传输层（Transport Layer）</li>
+<li>网络层（Network Layer）</li>
+<li>链接层（Link Layer）</li>
+<li>实体层（Physical Layer）</li>
+</ul>
+<p>每一层都是为了完成一种功能。为了实现这些功能，就需要大家都遵守共同的规则。大家都遵守的规则，就叫做”协议”（protocol）。<br>互联网的每一层，都定义了很多协议。这些协议的总称，就叫做”互联网协议”（Internet Protocol Suite）。它们是互联网的核心，下面介绍每一层的功能，主要就是介绍每一层的主要协议。</p>
+<h4 id="实体层"><a href="#实体层" class="headerlink" title="实体层"></a>实体层</h4><p>电脑要组网，第一件事要干什么？当然是先把电脑连起来，可以用光缆、电缆、双绞线、无线电波等方式。<br>这就叫做”实体层”，它就是把电脑连接起来的物理手段。它主要规定了网络的一些电气特性，作用是负责传送0和1的电信号。</p>
+<h4 id="链接层"><a href="#链接层" class="headerlink" title="链接层"></a>链接层</h4><p><strong>定义</strong><br>单纯的0和1没有任何意义，必须规定解读方式：多少个电信号算一组？每个信号位有何意义？<br>这就是”链接层”的功能，它在”实体层”的上方，确定了0和1的分组方式。</p>
+<p><strong>以太网协议</strong><br>早期的时候，每家公司都有自己的电信号分组方式。逐渐地，一种叫做”以太网”（Ethernet）的协议，占据了主导地位。<br>以太网规定，一组电信号构成一个数据包，叫做”帧”（Frame）。每一帧分成两个部分：标头（Head）和数据（Data）。<br>“标头”包含数据包的一些说明项，比如发送者、接受者、数据类型等等；”数据”则是数据包的具体内容。<br>“标头”的长度，固定为18字节。”数据”的长度，最短为46字节，最长为1500字节。因此，整个”帧”最短为64字节，最长为1518字节。如果数据很长，就必须分割成多个帧进行发送。<br><strong>MAC地址</strong><br>上面提到，以太网数据包的”标头”，包含了发送者和接受者的信息。那么，发送者和接受者是如何标识呢？<br>以太网规定，连入网络的所有设备，都必须具有”网卡”接口。数据包必须是从一块网卡，传送到另一块网卡。网卡的地址，就是数据包的发送地址和接收地址，这叫做MAC地址。<br><strong>广播</strong><br>首先：一块网卡怎么会知道另一块网卡的MAC地址？<br>回答是有一种ARP协议，可以解决这个问题。<br>其次：就算有了MAC地址，系统怎样才能把数据包准确送到接收方？<br>回答是以太网采用了一种很”原始”的方式，它不是把数据包准确送到接收方，而是向本网络内所有计算机发送，让每台计算机自己判断，是否为接收方。<br>1号计算机向2号计算机发送一个数据包，同一个子网络的3号、4号、5号计算机都会收到这个包。它们读取这个包的”标头”，找到接收方的MAC地址，然后与自身的MAC地址相比较，如果两者相同，就接受这个包，做进一步处理，否则就丢弃这个包。这种发送方式就叫做”广播”（broadcasting）。</p>
+<p>有了数据包的定义、网卡的MAC地址、广播的发送方式，”链接层”就可以在多台计算机之间传送数据了。</p>
+<h4 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h4><p><strong>网络层的由来</strong><br>以太网协议，依靠MAC地址发送数据。理论上，单单依靠MAC地址，上海的网卡就可以找到洛杉矶的网卡了，技术上是可以实现的。</p>
+<p>但是，这样做有一个重大的缺点。以太网采用广播方式发送数据包，所有成员人手一”包”，不仅效率低，而且局限在发送者所在的子网络。也就是说，如果两台计算机不在同一个子网络，广播是传不过去的。这种设计是合理的，否则互联网上每一台计算机都会收到所有包，那会引起灾难。</p>
+<p>互联网是无数子网络共同组成的一个巨型网络，很像想象上海和洛杉矶的电脑会在同一个子网络，这几乎是不可能的。<br>因此，必须找到一种方法，能够区分哪些MAC地址属于同一个子网络，哪些不是。如果是同一个子网络，就采用广播方式发送，否则就采用”路由”方式发送。（”路由”的意思，就是指如何向不同的子网络分发数据包，这是一个很大的主题，本文不涉及。）遗憾的是，MAC地址本身无法做到这一点。它只与厂商有关，与所处网络无关。</p>
+<p>这就导致了”网络层”的诞生。它的作用是引进一套新的地址，使得我们能够区分不同的计算机是否属于同一个子网络。这套地址就叫做”网络地址”，简称”网址”。</p>
+<p>于是，”网络层”出现以后，每台计算机有了两种地址，一种是MAC地址，另一种是网络地址。两种地址之间没有任何联系，MAC地址是绑定在网卡上的，网络地址则是管理员分配的，它们只是随机组合在一起。</p>
+<p>网络地址帮助我们确定计算机所在的子网络，MAC地址则将数据包送到该子网络中的目标网卡。因此，从逻辑上可以推断，必定是先处理网络地址，然后再处理MAC地址。</p>
+<p><strong>IP协议</strong><br>规定网络地址的协议，叫做IP协议。它所定义的地址，就被称为IP地址。目前，广泛采用的是IP协议第四版，简称IPv4。<br>IPv4这个版本规定，网络地址由32个二进制位组成<br>习惯上，我们用分成四段的十进制数表示IP地址，从0.0.0.0一直到255.255.255.255。</p>
+<p>互联网上的每一台计算机，都会分配到一个IP地址。这个地址分成两个部分，前一部分代表网络，后一部分代表主机。比如，IP地址172.16.254.1，这是一个32位的地址，假定它的网络部分是前24位（172.16.254），那么主机部分就是后8位（最后的那个1）。处于同一个子网络的电脑，它们IP地址的网络部分必定是相同的，也就是说172.16.254.2应该与172.16.254.1处在同一个子网络。</p>
+<p>但是，问题在于单单从IP地址，我们无法判断网络部分。还是以172.16.254.1为例，它的网络部分，到底是前24位，还是前16位，甚至前28位，从IP地址上是看不出来的。</p>
+<p>那么，怎样才能从IP地址，判断两台计算机是否属于同一个子网络呢？这就要用到另一个参数”子网掩码”（subnet mask）。</p>
+<p>所谓”子网掩码”，就是表示子网络特征的一个参数。它在形式上等同于IP地址，也是一个32位二进制数字，它的网络部分全部为1，主机部分全部为0。比如，IP地址172.16.254.1，如果已知网络部分是前24位，主机部分是后8位，那么子网络掩码就是11111111.11111111.11111111.00000000，写成十进制就是255.255.255.0。</p>
+<p>知道”子网掩码”，我们就能判断，任意两个IP地址是否处在同一个子网络。方法是将两个IP地址与子网掩码分别进行AND运算（两个数位都为1，运算结果为1，否则为0），然后比较结果是否相同，如果是的话，就表明它们在同一个子网络中，否则就不是。</p>
+<p>比如，已知IP地址172.16.254.1和172.16.254.233的子网掩码都是255.255.255.0，请问它们是否在同一个子网络？两者与子网掩码分别进行AND运算，结果都是172.16.254.0，因此它们在同一个子网络。</p>
+<p>总结一下，IP协议的作用主要有两个，一个是为每一台计算机分配IP地址，另一个是确定哪些地址在同一个子网络。</p>
+<p><strong>IP数据包</strong><br>IP数据包也分为”标头”和”数据”两个部分<br>“标头”部分主要包括版本、长度、IP地址等信息，”数据”部分则是IP数据包的具体内容。放在以太网数据包的data内</p>
+<p><strong>ARP协议</strong><br>关于”网络层”，还有最后一点需要说明。因为IP数据包是放在以太网数据包里发送的，所以我们必须同时知道两个地址，一个是对方的MAC地址，另一个是对方的IP地址。通常情况下，对方的IP地址是已知的（后文会解释），但是我们不知道它的MAC地址。</p>
+<p>所以，我们需要一种机制，能够从IP地址得到MAC地址。</p>
+<p>这里又可以分成两种情况：</p>
+<p>1）第一种情况：如果两台主机不在同一个子网络，那么事实上没有办法得到对方的MAC地址，只能把数据包传送到两个子网络连接处的”网关”（gateway），让网关去处理；<br>2）第二种情况：如果两台主机在同一个子网络，那么我们可以用ARP协议，得到对方的MAC地址。ARP协议也是发出一个数据包（包含在以太网数据包中），其中包含它所要查询主机的IP地址，在对方的MAC地址这一栏，填的是FF:FF:FF:FF:FF:FF，表示这是一个”广播”地址。它所在子网络的每一台主机，都会收到这个数据包，从中取出IP地址，与自身的IP地址进行比较。如果两者相同，都做出回复，向对方报告自己的MAC地址，否则就丢弃这个包。</p>
+<p>总之，有了ARP协议之后，我们就可以得到同一个子网络内的主机MAC地址，可以把数据包发送到任意一台主机之上了。</p>
+<h3 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h3><p><strong>传输层的由来</strong><br>有了MAC地址和IP地址，我们已经可以在互联网上任意两台主机上建立通信。</p>
+<p>接下来的问题是，同一台主机上有许多程序都需要用到网络，比如，你一边浏览网页，一边与朋友在线聊天。当一个数据包从互联网上发来的时候，你怎么知道，它是表示网页的内容，还是表示在线聊天的内容？</p>
+<p>也就是说，我们还需要一个参数，表示这个数据包到底供哪个程序（进程）使用。这个参数就叫做”端口”（port），它其实是每一个使用网卡的程序的编号。每个数据包都发到主机的特定端口，所以不同的程序就能取到自己所需要的数据。</p>
+<p>“端口”是0到65535之间的一个整数，正好16个二进制位。0到1023的端口被系统占用，用户只能选用大于1023的端口。不管是浏览网页还是在线聊天，应用程序会随机选用一个端口，然后与服务器的相应端口联系。</p>
+<p>“传输层”的功能，就是建立”端口到端口”的通信。相比之下，”网络层”的功能是建立”主机到主机”的通信。只要确定主机和端口，我们就能实现程序之间的交流。因此，Unix系统就把主机+端口，叫做”套接字”（socket）。有了它，就可以进行网络应用程序开发了。</p>
+<p><strong>UDP协议</strong><br>UDP数据包，也是由”标头”和”数据”两部分组成<br>“标头”部分主要定义了发出端口和接收端口，”数据”部分就是具体的内容。然后，把整个UDP数据包放入IP数据包的”数据”部分，而前面说过，IP数据包又是放在以太网数据包之中的，UDP数据包非常简单，”标头”部分一共只有8个字节，总长度不超过65,535字节，正好放进一个IP数据包。<br><strong>TCP协议</strong><br>UDP协议的优点是比较简单，容易实现，但是缺点是可靠性较差，一旦数据包发出，无法知道对方是否收到。为了解决这个问题，提高网络可靠性，TCP协议就诞生了。这个协议非常复杂，但可以近似认为，它就是有确认机制的UDP协议，每发出一个数据包都要求确认。如果有一个数据包遗失，就收不到确认，发出方就知道有必要重发这个数据包了。</p>
+<p>因此，TCP协议能够确保数据不会遗失。它的缺点是过程复杂、实现困难、消耗较多的资源。</p>
+<p>TCP数据包和UDP数据包一样，都是内嵌在IP数据包的”数据”部分。TCP数据包没有长度限制，理论上可以无限长，但是为了保证网络的效率，通常TCP数据包的长度不会超过IP数据包的长度，以确保单个TCP数据包不必再分割。</p>
+<h3 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h3><p>应用程序收到”传输层”的数据，接下来就要进行解读。由于互联网是开放架构，数据来源五花八门，必须事先规定好格式，否则根本无法解读。”应用层”的作用，就是规定应用程序的数据格式。</p>
+<p>举例来说，TCP协议可以为各种各样的程序传递数据，比如Email、WWW、FTP等等。那么，必须有不同协议规定电子邮件、网页、FTP数据的格式，这些应用程序协议就构成了”应用层”。这是最高的一层，直接面对用户。它的数据就放在TCP数据包的”数据”部分。<br>因此，现在的以太网的数据包就变成下面这样：<br><img src="/images/http.png" alt></p>
+<p>网络通信就是交换数据包。电脑A向电脑B发送一个数据包，后者收到了，回复一个数据包，从而实现两台电脑之间的通信。<br>发送这个包，需要知道两个地址：</p>
+<ul>
+<li>对方的MAC地址；</li>
+<li>对方的IP地址。<br>有了这两个地址，数据包才能准确送到接收者手中。但是，前面说过，MAC地址有局限性，如果两台电脑不在同一个子网络，就无法知道对方的MAC地址，必须通过网关（gateway）转发。<br>发送数据包之前，电脑必须判断对方是否在同一个子网络，然后选择相应的MAC地址。</li>
+</ul>
+<h3 id="用户的上网设置"><a href="#用户的上网设置" class="headerlink" title="用户的上网设置"></a>用户的上网设置</h3><ul>
+<li>本机的IP地址；</li>
+<li>子网掩码；</li>
+<li>网关的IP地址；</li>
+<li>DNS的IP地址。</li>
+</ul>
+<p><strong>动态IP地址</strong><br>所谓”动态IP地址”，指计算机开机后，会自动分配到一个IP地址，不用人为设定。它使用的协议叫做DHCP协议。</p>
+<p>这个协议规定，每一个子网络中，有一台计算机负责管理本网络的所有IP地址，它叫做”DHCP服务器”。新的计算机加入网络，必须向”DHCP服务器”发送一个”DHCP请求”数据包，申请IP地址和相关的网络参数。</p>
+<p>前面说过，如果两台计算机在同一个子网络，必须知道对方的MAC地址和IP地址，才能发送数据包。但是，新加入的计算机不知道这两个地址，怎么发送数据包呢？DHCP协议做了一些巧妙的规定。<br><strong>DHCP协议</strong><br>首先，它是一种应用层协议，建立在UDP协议之上，<br>1）最前面的”以太网标头”：设置发出方（本机）的MAC地址和接收方（DHCP服务器）的MAC地址。前者就是本机网卡的MAC地址，后者这时不知道，就填入一个广播地址：FF-FF-FF-FF-FF-FF。<br>2）后面的”IP标头”：设置发出方的IP地址和接收方的IP地址。这时，对于这两者，本机都不知道。于是，发出方的IP地址就设为0.0.0.0，接收方的IP地址设为255.255.255.255。<br>3）最后的”UDP标头”：设置发出方的端口和接收方的端口。这一部分是DHCP协议规定好的，发出方是68端口，接收方是67端口。<br>这个数据包构造完成后，就可以发出了。以太网是广播发送，同一个子网络的每台计算机都收到了这个包。因为接收方的MAC地址是FF-FF-FF-FF-FF-FF，看不出是发给谁的，所以每台收到这个包的计算机，还必须分析这个包的IP地址，才能确定是不是发给自己的。当看到发出方IP地址是0.0.0.0，接收方是255.255.255.255，于是DHCP服务器知道”这个包是发给我的”，而其他计算机就可以丢弃这个包。</p>
+<p>接下来，DHCP服务器读出这个包的数据内容，分配好IP地址，发送回去一个”DHCP响应”数据包。这个响应包的结构也是类似的，以太网标头的MAC地址是双方的网卡地址，IP标头的IP地址是DHCP服务器的IP地址（发出方）和255.255.255.255（接收方），UDP标头的端口是67（发出方）和68（接收方），分配给请求端的IP地址和本网络的具体参数则包含在Data部分。</p>
+<p>新加入的计算机收到这个响应包，于是就知道了自己的IP地址、子网掩码、网关地址、DNS服务器等等参数。<br><strong>DNS协议</strong><br>我们知道，发送数据包，必须要知道对方的IP地址。但是，现在，我们只知道网址<a href="http://www.google.com，不知道它的IP地址。DNS协议可以帮助我们，将这个网址转换成IP地址。已知DNS服务器为8.8.8.8，于是我们向这个地址发送一个DNS数据包（53端口）。" target="_blank" rel="noopener">www.google.com，不知道它的IP地址。DNS协议可以帮助我们，将这个网址转换成IP地址。已知DNS服务器为8.8.8.8，于是我们向这个地址发送一个DNS数据包（53端口）。</a><br>然后，DNS服务器做出响应，告诉我们Google的IP地址是172.194.72.105。于是，我们知道了对方的IP地址。<br><strong>子网掩码</strong><br>接下来，我们要判断，这个IP地址是不是在同一个子网络，这就要用到子网掩码。</p>
+<p>已知子网掩码是255.255.255.0，本机用它对自己的IP地址192.168.1.100，做一个二进制的AND运算（两个数位都为1，结果为1，否则为0），计算结果为192.168.1.0；然后对Google的IP地址172.194.72.105也做一个AND运算，计算结果为172.194.72.0。这两个结果不相等，所以结论是，Google与本机不在同一个子网络。</p>
+<p>因此，我们要向Google发送数据包，必须通过网关192.168.1.1转发，也就是说，接收方的MAC地址将是网关的MAC地址。</p>
 
       
     </div>
@@ -518,12 +534,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/java/" rel="tag"># java</a>
-          
-        </div>
-      
 
       
       
@@ -533,8 +543,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/10/springboot启动/" rel="next" title="'springboot启动'">
-                <i class="fa fa-chevron-left"></i> 'springboot启动'
+              <a href="/2019/07/16/sort/" rel="next" title="sort">
+                <i class="fa fa-chevron-left"></i> sort
               </a>
             
           </div>
@@ -542,10 +552,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/17/网络协议/" rel="prev" title="网络协议">
-                网络协议 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -724,7 +730,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#算法"><span class="nav-text">算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#冒泡排序"><span class="nav-text">冒泡排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择排序"><span class="nav-text">选择排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插入排序"><span class="nav-text">插入排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#希尔排序"><span class="nav-text">希尔排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#快速排序"><span class="nav-text">快速排序</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#网络协议"><span class="nav-text">网络协议</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#集线器"><span class="nav-text">集线器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#交换机"><span class="nav-text">交换机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#路由器"><span class="nav-text">路由器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五层模型"><span class="nav-text">五层模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#实体层"><span class="nav-text">实体层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#链接层"><span class="nav-text">链接层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网络层"><span class="nav-text">网络层</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#传输层"><span class="nav-text">传输层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用层"><span class="nav-text">应用层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用户的上网设置"><span class="nav-text">用户的上网设置</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -895,7 +901,7 @@
   
     <script>
   window.livereOptions = {
-    refer: '2019/07/16/sort/'
+    refer: '2019/07/17/网络协议/'
   };
   (function(d, s) {
     var j, e = d.getElementsByTagName(s)[0];
